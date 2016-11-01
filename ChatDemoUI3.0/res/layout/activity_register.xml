@@ -31,7 +31,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.1"
             android:hint="你的用户名"
-            android:inputType="phone"
+            android:inputType="text"
             android:textSize="20sp"/>
 
     </LinearLayout>
@@ -61,7 +61,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.1"
             android:hint="你的昵称"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:paddingLeft="5dp"
             android:textSize="20sp"/>
 
@@ -130,7 +130,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_register"
+        android:onClick="register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
