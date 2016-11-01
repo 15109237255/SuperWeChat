@@ -34,6 +34,7 @@ import cn.ucai.superwechat.DemoApplication;
 import cn.ucai.superwechat.DemoHelper;
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.db.DemoDBManager;
+import cn.ucai.superwechat.utils.L;
 
 /**
  * Login screen
@@ -131,12 +132,12 @@ public class LoginActivity extends BaseActivity {
         
 		final long start = System.currentTimeMillis();
 		// call login method
-		Log.d(TAG, "EMClient.getInstance().login");
+		L.d(TAG, "EMClient.getInstance().login");
 		EMClient.getInstance().login(currentUsername, currentPassword, new EMCallBack() {
 
 			@Override
 			public void onSuccess() {
-				Log.d(TAG, "login: onSuccess");
+				L.d(TAG, "login: onSuccess");
 
 
 				// ** manually load all local groups and conversation
@@ -147,7 +148,7 @@ public class LoginActivity extends BaseActivity {
 				boolean updatenick = EMClient.getInstance().updateCurrentUserNick(
 						DemoApplication.currentUserNick.trim());
 				if (!updatenick) {
-					Log.e("LoginActivity", "update current user nick fail");
+					L.e("LoginActivity", "update current user nick fail");
 				}
 
 				if (!LoginActivity.this.isFinishing() && pd.isShowing()) {

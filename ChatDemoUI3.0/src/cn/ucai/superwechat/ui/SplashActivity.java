@@ -44,7 +44,7 @@ public class SplashActivity extends BaseActivity {
 						}
 					}
 					//enter main screen
-					startActivity(new Intent(SplashActivity.this, GuideActivity.class));
+					startActivity(new Intent(SplashActivity.this, MainActivity.class));
 					finish();
 				}else {
 					try {
