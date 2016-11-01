@@ -393,7 +393,6 @@
             android:name="com.hyphenate.chat.EMHuaweiPushReceiver"
             android:exported="true">
             <intent-filter>
-
                 <!-- 必须,用于接收token -->
                 <action android:name="com.huawei.android.push.intent.REGISTRATION"/>
                 <!-- 必须，用于接收消息 -->
