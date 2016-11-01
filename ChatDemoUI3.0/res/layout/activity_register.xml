@@ -4,6 +4,7 @@
               android:layout_height="match_parent"
               android:id="@+id/layout_activity_register"
               android:orientation="vertical">
+    <include layout="@layout/view_layout_title"/>
 
     <LinearLayout
         android:id="@+id/layout_register_username"
@@ -130,6 +131,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btn_register"
         android:onClick="register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
