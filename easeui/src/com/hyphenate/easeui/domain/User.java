@@ -99,7 +99,7 @@ public class User implements Serializable {
 //		}
 //		return initialLetter;
 //	}
-//
+
 //	public void setInitialLetter(String initialLetter) {
 //		this.initialLetter = initialLetter;
 //	}
