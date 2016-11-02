@@ -4,7 +4,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:weightSum="1">
-
+    <include layout="@layout/view_layout_title"/>
     <LinearLayout
         android:id="@+id/ll_login_username"
         android:layout_width="match_parent"
@@ -97,6 +97,7 @@
         android:layout_marginTop="145dp"
         android:background="@color/gray"
         android:text="  注   册  "
+        android:onClick="register"
         android:textColor="@color/black2"
         android:textSize="18sp"/>
 

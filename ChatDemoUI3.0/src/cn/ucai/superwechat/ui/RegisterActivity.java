@@ -141,6 +141,7 @@ public class RegisterActivity extends BaseActivity {
 
             }
         });
+        MFGT.gotoLogin(this);
 //
 //        registerEMServer();//注册环信的服务器
 //        unregisterAppServer();
@@ -216,6 +217,7 @@ public class RegisterActivity extends BaseActivity {
                 break;
             case R.id.btn_register:
                 register();
+
                 break;
         }
     }
