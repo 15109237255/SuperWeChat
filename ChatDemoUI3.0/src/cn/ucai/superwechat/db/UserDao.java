@@ -123,15 +123,15 @@ public class UserDao {
 	}
 
 	public void saveAppContact(User user) {
-		
+		SuperWeChatDBManager.getInstance().saveAppContact(user);
 	}
 
 
 	public Map<String,User> getAppContactList() {
-		return null;
+		return SuperWeChatDBManager.getInstance().getAppContactList();
 	}
 
 	public void saveAppContactList(ArrayList<User> mList) {
-		
+		SuperWeChatDBManager.getInstance().saveAppContactList(mList);
 	}
 }
