@@ -55,7 +55,7 @@ public class DbOpenHelper extends SQLiteOpenHelper{
             + UserDao.COLUMN_NAME_DISABLED_IDS + " TEXT);";
 
 	private static final String CREATE_USER_TABLE=" CREATE TABLE "
-			+UserDao.USER_TABLE_NAME+" ("
+			+UserDao.USER_TABLE_NAME+" ( "
 			+UserDao.USER_COLUMN_NAME+" TEXT PRIMARY KEY, "
 			+UserDao.USER_COLUMN_NICK+" TEXT, "
 			+UserDao.USER_COLUMN_AVATAR_ID+" INTEGER, "
@@ -85,6 +85,7 @@ public class DbOpenHelper extends SQLiteOpenHelper{
 		db.execSQL(INIVTE_MESSAGE_TABLE_CREATE);
 		db.execSQL(CREATE_PREF_TABLE);
 		db.execSQL(ROBOT_TABLE_CREATE);
+		db.execSQL(CREATE_USER_TABLE);
 		
 	}
 

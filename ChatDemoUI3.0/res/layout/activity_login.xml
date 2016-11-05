@@ -65,9 +65,8 @@
             android:textSize="18sp"/>
 
     </LinearLayout>
-
     <Button
-        android:onClick="login"
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -97,7 +96,6 @@
         android:layout_marginTop="145dp"
         android:background="@color/gray"
         android:text="  注   册  "
-        android:onClick="register"
         android:textColor="@color/black2"
         android:textSize="18sp"/>
 

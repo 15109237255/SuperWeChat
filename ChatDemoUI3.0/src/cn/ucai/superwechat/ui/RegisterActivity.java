@@ -117,7 +117,7 @@ public class RegisterActivity extends BaseActivity {
     }
 
     private void registerAppServer() {
-        NetDao.register(mContext, username, nick, pwd, new OkHttpUtils.OnCompleteListener<Result>() {
+        NetDao.register(mContext, username, nick,MD5.getMessageDigest(pwd), new OkHttpUtils.OnCompleteListener<Result>() {
             @Override
             public void onSuccess(Result result) {
                 if (result == null) {
