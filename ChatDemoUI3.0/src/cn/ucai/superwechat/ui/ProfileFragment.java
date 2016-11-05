@@ -16,10 +16,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.ucai.superwechat.Constant;
 import cn.ucai.superwechat.R;
+import cn.ucai.superwechat.utils.MFGT;
 
-/**
- * Created by Angela on 2016/11/5.
- */
 
 public class ProfileFragment extends Fragment {
     @BindView(R.id.iv_profile_avatar)
@@ -60,6 +58,7 @@ public class ProfileFragment extends Fragment {
                 RedPacketUtil.startChangeActivity(getActivity());
                 break;
             case R.id.tv_profile_setting:
+                MFGT.gotoSetting(getActivity());
                 break;
         }
     }
