@@ -24,7 +24,9 @@ public class CommonUtils {
     }
     public static void showMsgShortToast(int magId){
         if (magId>0){
-            showShortToast(SuperWeChatApplication.getInstance().getResources().getIdentifier(I.MSG_PREFIX_MSG+magId,"string",SuperWeChatApplication.getInstance().getPackageName()));
+            showShortToast(SuperWeChatApplication.getInstance().getResources()
+                    .getIdentifier(I.MSG_PREFIX_MSG+magId,"string",
+                            SuperWeChatApplication.getInstance().getPackageName()));
         }else {
             showShortToast(R.string.msg_1);
         }

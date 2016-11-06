@@ -237,11 +237,13 @@ public class UserProfileActivity extends BaseActivity implements OnClickListener
         dialog = ProgressDialog.show(this, getString(R.string.dl_update_photo), getString(R.string.dl_waiting));
         dialog.show();
         File file = saveBitmapFile(picData);
+        L.e(TAG,"file="+file);
         NetDao.updateAvatar(this, user.getMUserName(), file, new OkHttpUtils.OnCompleteListener<String>() {
             @Override
             public void onSuccess(String s) {
                 if (s!=null){
                     Result result = ResultUtils.getResultFromJson(s,User.class);
+                    L.e(TAG,"result="+result);
                     if (result!=null && result.isRetMsg()){
                         setPicToView(picData);
                     }else {
