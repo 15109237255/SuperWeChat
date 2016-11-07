@@ -6,7 +6,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/common_bg">
-    <include layout="@layout/view_layout_title"/>
+    <include  layout="@layout/view_layout_title"/>
     <cn.ucai.superwechat.widget.MFViewPager
         android:layout_width="match_parent"
         android:id="@+id/layout_viewpage"
