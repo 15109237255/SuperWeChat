@@ -138,6 +138,16 @@
             android:name="cn.ucai.superwechat.ui.PickAtUserActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"/>
+        <activity
+            android:name=".ui.AddFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateVisible"/>
+        <activity
+            android:name=".ui.FrientProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="stateVisible"/>
         <!-- 地图 -->
         <activity
             android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"
@@ -482,8 +492,8 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide">
         </activity>
-        <activity android:name=".ui.FrientProfileActivity">
-        </activity>
+        <!--<activity android:name=".ui.FrientProfileActivity">-->
+        <!--</activity>-->
     </application>
 
 </manifest>
