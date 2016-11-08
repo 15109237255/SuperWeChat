@@ -70,10 +70,11 @@ public class FrientProfileActivity extends BaseActivity {
     }
 
     private void setUserInfo() {
-        EaseUserUtils.setAppUserAvatar(this,user.getMUserName(),mProfileImage);
-        EaseUserUtils.setAppUserNick(user.getMUserNick(),mTvUserinfoNick);
-        EaseUserUtils.setAppUserNameWithNo(user.getMUserName(),mTvUserinfoName);
+        EaseUserUtils.setAppUserAvatar(this, user.getMUserName(), mProfileImage);
+        EaseUserUtils.setAppUserNick(user.getMUserNick(), mTvUserinfoNick);
+        EaseUserUtils.setAppUserNameWithNo(user.getMUserName(), mTvUserinfoName);
     }
+
 
     @OnClick({R.id.img_back, R.id.btn_add_contact, R.id.btn_send_msg, R.id.btn_send_video})
     public void onClick(View view) {
@@ -85,6 +86,7 @@ public class FrientProfileActivity extends BaseActivity {
                 MFGT.gotoAddFirendMsg(this,user.getMUserName());
                 break;
             case R.id.btn_send_msg:
+                MFGT.gotoChat(this,user.getMUserName());
                 break;
             case R.id.btn_send_video:
                 break;

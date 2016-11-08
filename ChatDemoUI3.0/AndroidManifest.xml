@@ -147,7 +147,7 @@
             android:name=".ui.FrientProfileActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="stateVisible"/>
+            />
         <!-- 地图 -->
         <activity
             android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"
@@ -492,8 +492,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide">
         </activity>
-        <!--<activity android:name=".ui.FrientProfileActivity">-->
-        <!--</activity>-->
+
     </application>
 
 </manifest>
