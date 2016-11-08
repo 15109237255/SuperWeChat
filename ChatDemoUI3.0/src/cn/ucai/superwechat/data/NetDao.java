@@ -113,11 +113,28 @@ public class NetDao {
 
     }
 
+    /**
+     * 查找用户
+     * @param context
+     * @param username
+     * @param listener
+     */
     public static void searchUser(Context context, String username,
                              OkHttpUtils.OnCompleteListener<String> listener){
         OkHttpUtils<String> utils=new OkHttpUtils<>(context);
         utils.setRequestUrl(I.REQUEST_FIND_USER)
                 .addParam(I.User.USER_NAME,username)
+                .targetClass(String.class)
+                .execute(listener);
+
+    }
+
+    public static void addContact(Context context, String username, String cusername,
+                             OkHttpUtils.OnCompleteListener<String> listener){
+        OkHttpUtils<String> utils=new OkHttpUtils<>(context);
+        utils.setRequestUrl(I.REQUEST_ADD_CONTACT)
+                .addParam(I.Contact.USER_NAME,username)
+                .addParam(I.Contact.CU_NAME,cusername)
                 .targetClass(String.class)
                 .execute(listener);
 

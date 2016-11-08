@@ -129,6 +129,10 @@ public class MFGT {
         startActivity(context, intent);
     }
 
+    /**
+     * 跳转至新朋友消息
+     * @param context
+     */
     public static void gotoNewFriendsMsg(Activity context){
         startActivity(context, NewFriendsMsgActivity.class);
     }
