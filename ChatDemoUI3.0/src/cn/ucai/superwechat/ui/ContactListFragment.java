@@ -40,6 +40,7 @@ import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.SuperWeChatHelper;
 import cn.ucai.superwechat.db.InviteMessgeDao;
 import cn.ucai.superwechat.db.UserDao;
+import cn.ucai.superwechat.utils.L;
 import cn.ucai.superwechat.utils.MFGT;
 import cn.ucai.superwechat.widget.ContactItemView;
 
@@ -126,7 +127,7 @@ public class ContactListFragment extends EaseContactListFragment {
                     String username = user.getUsername();
                     // demo中直接进入聊天页面，实际一般是进入用户详情页
                     MFGT.gotoFriendProfile(getActivity(),SuperWeChatHelper.getInstance().getAppContactList().get(username));
-//                    startActivity(new Intent(getActivity(), FrientProfileActivity.class).putExtra("userId", username));
+//                    startActivity(new Intent(getActivity(), ChatActivity.class).putExtra("userId", username));
                 }
             }
         });
@@ -216,6 +217,7 @@ public class ContactListFragment extends EaseContactListFragment {
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
+        L.e(TAG,"onContextItemSelected..."+item.getItemId());
         if (item.getItemId() == R.id.delete_contact) {
             try {
                 // delete contact
@@ -334,4 +336,5 @@ public class ContactListFragment extends EaseContactListFragment {
         }
 
     }
+
 }
