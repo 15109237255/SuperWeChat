@@ -25,6 +25,8 @@ import java.util.Map;
 import cn.ucai.superwechat.domain.RobotUser;
 
 public class UserDao {
+
+
 	public static final String TABLE_NAME = "uers";
 	public static final String COLUMN_NAME_ID = "username";
 	public static final String COLUMN_NAME_NICK = "nick";
@@ -134,4 +136,12 @@ public class UserDao {
 	public void saveAppContactList(ArrayList<User> mList) {
 		SuperWeChatDBManager.getInstance().saveAppContactList(mList);
 	}
+	/**
+	 * delete a contact
+	 * @param username
+	 */
+	public void deleteAppContact(String username){
+		SuperWeChatDBManager.getInstance().deleteAppContact(username);
+	}
+
 }
