@@ -630,10 +630,12 @@ public class SuperWeChatHelper {
                     public void onSuccess(String s) {
                         if(s!=null){
                             Result result = ResultUtils.getResultFromJson(s, User.class);
-                            if(result!=null && result.isRetMsg()){
+                            if(result!=null && result.isRetMsg()) {
                                 User u = (User) result.getRetData();
-                                saveAppContact(u);
-                                broadcastManager.sendBroadcast(new Intent(Constant.ACTION_CONTACT_CHANAGED));
+                                if (u != null) {
+                                    saveAppContact(u);
+                                    broadcastManager.sendBroadcast(new Intent(Constant.ACTION_CONTACT_CHANAGED));
+                                }
                             }
                         }
                     }
