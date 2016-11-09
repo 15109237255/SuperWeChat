@@ -101,6 +101,8 @@ public class SuperWeChatHelper {
 
     private Map<String, User> appContactList;
 
+    private User currentUser = null;
+
     /**
      * sync groups status listener
      */
@@ -1363,5 +1365,15 @@ public class SuperWeChatHelper {
     public void delAppContact(String username){
         getAppContactList().remove(username);
         demoModel.delAppContact(username);
+    }
+
+    public User getCurrentUser() {
+
+        return currentUser;
+    }
+
+
+    public void setCurrentUser(User currentUser) {
+        this.currentUser = currentUser;
     }
 }
