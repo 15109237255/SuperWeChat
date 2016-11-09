@@ -46,7 +46,7 @@ public class FrientProfileActivity extends BaseActivity {
         setContentView(R.layout.activity_friend_profile);
         ButterKnife.bind(this);
         user = (User) getIntent().getSerializableExtra(I.User.USER_NAME);
-        if(user==null){
+        if (user == null) {
             MFGT.finish(this);
             return;
         }
@@ -75,7 +75,6 @@ public class FrientProfileActivity extends BaseActivity {
         EaseUserUtils.setAppUserNick(user.getMUserNick(), mTvUserinfoNick);
         EaseUserUtils.setAppUserNameWithNo(user.getMUserName(), mTvUserinfoName);
     }
-
 
     @OnClick({R.id.img_back, R.id.btn_add_contact, R.id.btn_send_msg, R.id.btn_send_video})
     public void onClick(View view) {
